@@ -34,7 +34,7 @@ interface BreadcrumbOptions {
 
 const defaultOptions: BreadcrumbOptions = {
   spacerSymbol: "/",
-  rootName: "→ ",
+  rootName: "science",
   resolveFrontmatterTitle: true,
   hideOnRoot: true,
   showCurrentPage: true,
