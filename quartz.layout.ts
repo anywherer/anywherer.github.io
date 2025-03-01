@@ -38,9 +38,34 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-  ],
+    Component.Graph({
+      localGraph: {
+        drag: true,
+        zoom: true,
+        depth: 2,
+        scale: 1.7,
+        repelForce: 2,
+        centerForce: 0.3,
+        linkDistance: 13,
+        fontSize: 0.5,
+        opacityScale: 3,
+        removeTags: [],
+        showTags: true,
+      },
+      globalGraph: {
+        drag: true,
+        zoom: true,
+        depth: 3,
+        scale: 1.6,
+        repelForce: 2,
+        centerForce: 0.8,
+        linkDistance: 40,
+        fontSize: 0.8,
+        opacityScale: 2,
+        removeTags: [],
+        showTags: true,
+      },
+    }),
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)

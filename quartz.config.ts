@@ -10,14 +10,14 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "anywherer.github.io",
-    ignorePatterns: [".obsidian", "assets/*.md"],
+    ignorePatterns: [".obsidian", "assets/*.md", "temp", "plugins"],
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {
       // fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "sans-serif",
+        header: "Chalkboard SE", // Patrick Hand
         body: "sans-serif",
         code: "monospace",
       },
@@ -52,7 +52,7 @@ const config: QuartzConfig = {
       Plugin.HardLineBreaks(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
+        priority: ["frontmatter", "git", "filesystem"],
       }),
       Plugin.SyntaxHighlighting({
         theme: {
